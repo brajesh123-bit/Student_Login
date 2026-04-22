@@ -1,0 +1,146 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #14213d;
+  background: linear-gradient(135deg, #f7f7f7 0%, #d9e7ff 100%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  color: #0f62fe;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+  background: #14213d;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #c7d2e3;
+  border-radius: 10px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #0f62fe;
+}
+
+.auth-page,
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 45px rgba(20, 33, 61, 0.12);
+}
+
+.panel {
+  max-width: none;
+}
+
+.subtitle {
+  margin-top: -0.25rem;
+  color: #5c677d;
+}
+
+.form {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.error {
+  color: #b42318;
+}
+
+.success {
+  color: #157347;
+}
+
+.switch-text {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.dashboard-shell {
+  width: min(100%, 1100px);
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.details-list p {
+  margin: 0.4rem 0;
+}
+
+.secondary-button {
+  background: #ef233c;
+}
+
+@media (max-width: 700px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
